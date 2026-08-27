@@ -13,12 +13,24 @@
 <!-- NAVBAR -->
 <div id="main-nav"></div>
 
-<!-- ====== SECTION 1: HERO ====== -->
-<section class="hero">
-    <div class="hero-bg">
-        <img src="assets/images/hero_bg_home1.jpg" alt="Board games spread on table" />
+<!-- ====== SECTION 1: HERO SLIDER ====== -->
+<section class="hero" id="hero-section" aria-label="Hero Carousel">
+    <!-- 3 Slide Background Images -->
+    <div class="hero-slides-wrapper" id="hero-slides-track">
+        <div class="hero-slide active" data-index="0">
+            <img src="assets/images/hero_bg_home1.jpg" alt="Board games spread on table" class="hero-slide-img" />
+        </div>
+        <div class="hero-slide" data-index="1">
+            <img src="assets/images/store_interior.jpg" alt="Cozy board game store and library" class="hero-slide-img" />
+        </div>
+        <div class="hero-slide" data-index="2">
+            <img src="assets/images/game_night_event.jpg" alt="Community game night and tournament" class="hero-slide-img" />
+        </div>
     </div>
+
+    <!-- Overlay Gradient -->
     <div class="hero-overlay"></div>
+
     <!-- Floating dice decorations -->
     <svg class="hero-dice-float" width="80" height="80" viewBox="0 0 120 120" fill="none">
         <path d="M60 75 L95 55 L95 85 L60 105 Z" fill="#A78BFA" opacity="0.5"/>
@@ -33,17 +45,26 @@
         <path d="M25 55 L60 35 L60 75 L25 95 Z" fill="#7C3AED" opacity="0.5"/>
         <path d="M25 55 L60 35 L95 55 L60 75 Z" fill="#C4B5FD" opacity="0.4"/>
     </svg>
-    <div class="container hero-content">
-        <div class="section-label" style="color:#A78BFA;">
+
+    <!-- Centered Content -->
+    <div class="container hero-content" style="text-align:center;max-width:840px;margin:0 auto;display:flex;flex-direction:column;align-items:center;">
+        <div class="section-label" style="color:#A78BFA;justify-content:center;margin-bottom:1rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
             BOARD GAMES • CARD GAMES • PUZZLES
         </div>
-        <h1 style="color:#fff;max-width:650px;margin-bottom:1.25rem;text-shadow:0 3px 18px rgba(0,0,0,0.6);">Roll the Dice on Fun — Your Next Adventure Awaits</h1>
-        <p style="color:rgba(255,255,255,0.88);font-size:1.125rem;max-width:520px;margin-bottom:2rem;">Discover over 2,000 board games, from strategy classics to the newest releases. Visit our store, join game nights, and find your next favorite game.</p>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <h1 style="color:#fff;max-width:780px;margin:0 auto 1.25rem;text-shadow:0 3px 18px rgba(0,0,0,0.6);">Roll the Dice on Fun — Your Next Adventure Awaits</h1>
+        <p style="color:rgba(255,255,255,0.9);font-size:1.125rem;max-width:640px;margin:0 auto 2.25rem;">Discover over 2,000 board games, from strategy classics to the newest releases. Visit our store, join game nights, and find your next favorite game.</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
             <a href="products.html" class="btn btn-primary btn-lg">Browse Games</a>
-            <a href="events.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">Upcoming Events</a>
+            <a href="events.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.35);">Upcoming Events</a>
         </div>
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="hero-slider-dots" id="hero-dots">
+        <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
     </div>
 </section>
 
@@ -153,19 +174,19 @@
         </div>
         <div class="grid grid-4 animate-on-scroll">
             <div class="product-card">
-                <div class="product-card-image"><img src="assets/images/new_arrivals.jpg" alt="Dragon's Odyssey" /><span class="badge-category">Strategy</span></div>
+                <div class="product-card-image"><img src="assets/images/product_dragons_odyssey.jpg" alt="Dragon's Odyssey Strategy Board Game" /><span class="badge-category">Strategy</span></div>
                 <div class="product-card-body"><h4>Dragon's Odyssey</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-5</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 min</span></div><div class="product-price">₹2,799<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
             </div>
             <div class="product-card">
-                <div class="product-card-image"><img src="assets/images/category_card.jpg" alt="Stellar Horizons" /><span class="badge-category">Card Game</span></div>
+                <div class="product-card-image"><img src="assets/images/product_stellar_horizons.jpg" alt="Stellar Horizons Space Card Game" /><span class="badge-category">Card Game</span></div>
                 <div class="product-card-body"><h4>Stellar Horizons</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-4</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</span></div><div class="product-price">₹999<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
             </div>
             <div class="product-card">
-                <div class="product-card-image"><img src="assets/images/category_family.jpg" alt="Mystic Grove" /><span class="badge-category">Family</span></div>
+                <div class="product-card-image"><img src="assets/images/product_mystic_grove.jpg" alt="Mystic Grove Family Board Game" /><span class="badge-category">Family</span></div>
                 <div class="product-card-body"><h4>Mystic Grove</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-6</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45 min</span></div><div class="product-price">₹1,499<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
             </div>
             <div class="product-card">
-                <div class="product-card-image"><img src="assets/images/category_puzzle.jpg" alt="Alpine Peaks Puzzle" /><span class="badge-category">Puzzle</span></div>
+                <div class="product-card-image"><img src="assets/images/product_alpine_peaks.jpg" alt="Alpine Peaks 1000-Piece Jigsaw Puzzle" /><span class="badge-category">Puzzle</span></div>
                 <div class="product-card-body"><h4>Alpine Peaks — 1000pc</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 1+</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3-5 hrs</span></div><div class="product-price">₹899<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
             </div>
         </div>
@@ -248,7 +269,7 @@
                 </div>
                 <p class="quote">"The staff here really know their games. They recommended Wingspan for our family and we've been playing it every weekend since. Best game store in the city!"</p>
                 <div class="author">
-                    <div class="author-avatar">RP</div>
+                    <div class="author-avatar"><img src="assets/images/avatar_rahul_patel.jpg" alt="Rahul Patel" /></div>
                     <div>
                         <div class="author-name">Rahul Patel</div>
                         <div class="author-role">Family Gamer</div>
@@ -265,7 +286,7 @@
                 </div>
                 <p class="quote">"Game night Fridays at Dice & Beyond are legendary! Met my entire D&D group here. The selection of dice and miniatures is unmatched. A must-visit for any RPG fan."</p>
                 <div class="author">
-                    <div class="author-avatar">SM</div>
+                    <div class="author-avatar"><img src="assets/images/avatar_shreya_menon.jpg" alt="Shreya Menon" /></div>
                     <div>
                         <div class="author-name">Shreya Menon</div>
                         <div class="author-role">RPG Enthusiast</div>
@@ -282,7 +303,7 @@
                 </div>
                 <p class="quote">"I bought a 1000-piece Ravensburger puzzle and it was the most relaxing weekend I've had in months. The puzzle collection here is seriously curated. Highly recommend visiting!"</p>
                 <div class="author">
-                    <div class="author-avatar">AK</div>
+                    <div class="author-avatar"><img src="assets/images/avatar_arjun_kumar.jpg" alt="Arjun Kumar" /></div>
                     <div>
                         <div class="author-name">Arjun Kumar</div>
                         <div class="author-role">Puzzle Lover</div>

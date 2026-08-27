@@ -383,10 +383,111 @@ window.addEventListener('scroll', function() {
     }
 }, { passive: true });
 
+/* ─── HERO SLIDER ────────────────────────────────────────── */
+function initHeroSlider() {
+    const track = document.getElementById('hero-slides-track');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer = null;
+    const interval = 5000; // 5 seconds once
+
+    function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        current = index;
+
+        slides.forEach((s, idx) => {
+            s.classList.toggle('active', idx === current);
+        });
+
+        dots.forEach((d, idx) => {
+            d.classList.toggle('active', idx === current);
+        });
+    }
+
+    function next() {
+        goToSlide(current + 1);
+    }
+
+    function prev() {
+        goToSlide(current - 1);
+    }
+
+    function startTimer() {
+        stopTimer();
+        timer = setInterval(next, interval);
+    }
+
+    function stopTimer() {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            next();
+            startTimer();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            prev();
+            startTimer();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', function(e) {
+            e.preventDefault();
+            goToSlide(idx);
+            startTimer();
+        });
+    });
+
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection) {
+        heroSection.addEventListener('mouseenter', stopTimer);
+        heroSection.addEventListener('mouseleave', startTimer);
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        heroSection.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        heroSection.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) {
+                next();
+                startTimer();
+            } else if (touchEndX - touchStartX > 50) {
+                prev();
+                startTimer();
+            }
+        }, { passive: true });
+    }
+
+    startTimer();
+}
+
 /* ─── INIT ON DOM READY ─────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function() {
     injectNav();
     injectFooter();
     initScrollAnimations();
     animateCounters();
+    initHeroSlider();
 });
