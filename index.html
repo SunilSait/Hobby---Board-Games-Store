@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dice & Beyond — Your ultimate destination for board games, card games, puzzles, RPG accessories, and game night events. Browse our curated collection and join the community.">
+    <title>Dice & Beyond — Hobby & Board Games Store</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="main-nav"></div>
+
+<!-- ====== SECTION 1: HERO ====== -->
+<section class="hero">
+    <div class="hero-bg">
+        <img src="assets/images/hero_bg_home1.jpg" alt="Board games spread on table" />
+    </div>
+    <div class="hero-overlay"></div>
+    <!-- Floating dice decorations -->
+    <svg class="hero-dice-float" width="80" height="80" viewBox="0 0 120 120" fill="none">
+        <path d="M60 75 L95 55 L95 85 L60 105 Z" fill="#A78BFA" opacity="0.5"/>
+        <path d="M25 55 L60 35 L60 75 L25 95 Z" fill="#7C3AED" opacity="0.6"/>
+        <path d="M25 55 L60 35 L95 55 L60 75 Z" fill="#C4B5FD" opacity="0.5"/>
+        <circle cx="42" cy="50" r="3.5" fill="#fff" opacity="0.6"/>
+        <circle cx="60" cy="52" r="3.5" fill="#fff" opacity="0.6"/>
+        <circle cx="78" cy="50" r="3.5" fill="#fff" opacity="0.6"/>
+    </svg>
+    <svg class="hero-dice-float" width="60" height="60" viewBox="0 0 120 120" fill="none">
+        <path d="M60 75 L95 55 L95 85 L60 105 Z" fill="#A78BFA" opacity="0.4"/>
+        <path d="M25 55 L60 35 L60 75 L25 95 Z" fill="#7C3AED" opacity="0.5"/>
+        <path d="M25 55 L60 35 L95 55 L60 75 Z" fill="#C4B5FD" opacity="0.4"/>
+    </svg>
+    <div class="container hero-content">
+        <div class="section-label" style="color:#A78BFA;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            BOARD GAMES • CARD GAMES • PUZZLES
+        </div>
+        <h1 style="color:#fff;max-width:650px;margin-bottom:1.25rem;text-shadow:0 3px 18px rgba(0,0,0,0.6);">Roll the Dice on Fun — Your Next Adventure Awaits</h1>
+        <p style="color:rgba(255,255,255,0.88);font-size:1.125rem;max-width:520px;margin-bottom:2rem;">Discover over 2,000 board games, from strategy classics to the newest releases. Visit our store, join game nights, and find your next favorite game.</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="products.html" class="btn btn-primary btn-lg">Browse Games</a>
+            <a href="events.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">Upcoming Events</a>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 2: FEATURED CATEGORIES ====== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Shop by Category</div>
+            <h2>Find Your Perfect Game</h2>
+            <p>From brain-burning strategy games to family-friendly classics — explore our curated categories.</p>
+        </div>
+        <div class="grid grid-5 animate-on-scroll" style="gap:1.25rem;">
+            <!-- Strategy -->
+            <div class="card-flat" style="text-align:center;">
+                <div style="aspect-ratio:4/3;overflow:hidden;">
+                    <img src="assets/images/category_strategy.jpg" alt="Strategy Games" class="img-cover" />
+                </div>
+                <div style="padding:1.25rem;">
+                    <h4 style="margin-bottom:0.375rem;">Strategy</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-muted);">Rewarding gameplay</p>
+                </div>
+            </div>
+            <!-- Card -->
+            <div class="card-flat" style="text-align:center;">
+                <div style="aspect-ratio:4/3;overflow:hidden;">
+                    <img src="assets/images/category_card.jpg" alt="Card Games" class="img-cover" />
+                </div>
+                <div style="padding:1.25rem;">
+                    <h4 style="margin-bottom:0.375rem;">Card Games</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-muted);">Quick & competitive</p>
+                </div>
+            </div>
+            <!-- Family -->
+            <div class="card-flat" style="text-align:center;">
+                <div style="aspect-ratio:4/3;overflow:hidden;">
+                    <img src="assets/images/category_family.jpg" alt="Family Games" class="img-cover" />
+                </div>
+                <div style="padding:1.25rem;">
+                    <h4 style="margin-bottom:0.375rem;">Family</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-muted);">Fun for all ages</p>
+                </div>
+            </div>
+            <!-- Puzzle -->
+            <div class="card-flat" style="text-align:center;">
+                <div style="aspect-ratio:4/3;overflow:hidden;">
+                    <img src="assets/images/category_puzzle.jpg" alt="Puzzles" class="img-cover" />
+                </div>
+                <div style="padding:1.25rem;">
+                    <h4 style="margin-bottom:0.375rem;">Puzzles</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-muted);">Relaxing & rewarding</p>
+                </div>
+            </div>
+            <!-- RPG -->
+            <div class="card-flat" style="text-align:center;">
+                <div style="aspect-ratio:4/3;overflow:hidden;">
+                    <img src="assets/images/category_rpg.jpg" alt="RPG Accessories" class="img-cover" />
+                </div>
+                <div style="padding:1.25rem;">
+                    <h4 style="margin-bottom:0.375rem;">RPG Accessories</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-muted);">Dice, minis & more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 4: GAME OF THE WEEK ====== -->
+<section class="section bg-surface">
+    <div class="container">
+        <div class="gotw-split animate-on-scroll">
+            <div class="gotw-image">
+                <img src="assets/images/game_of_week.jpg" alt="Fortress of the Ages — Game of the Week" />
+            </div>
+            <div class="gotw-details">
+                <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Game of the Week</div>
+                <h2>Fortress of the Ages</h2>
+                <div class="game-rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span style="font-size:0.875rem;color:var(--text-muted);margin-left:0.5rem;">4.8 (245 reviews)</span>
+                </div>
+                <p style="margin-bottom:1rem;">An epic medieval strategy game where players build kingdoms, forge alliances, and wage war to dominate the realm. With deep mechanics and beautiful miniatures, this is perfect for strategy enthusiasts who crave immersive gameplay sessions.</p>
+                <div class="game-meta">
+                    <span class="game-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 2-4 Players</span>
+                    <span class="game-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 60-120 min</span>
+                    <span class="game-meta-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Ages 14+</span>
+                </div>
+                <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                    <a href="products.html" class="btn btn-primary">Shop Now — ₹3,499</a>
+                    <a href="recommendations.html" class="btn btn-secondary">See Similar Games</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 5: NEW ARRIVALS ====== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Just In</div>
+            <h2>New Arrivals This Week</h2>
+            <p>Fresh titles hitting our shelves — be the first to discover and play them.</p>
+        </div>
+        <div class="grid grid-4 animate-on-scroll">
+            <div class="product-card">
+                <div class="product-card-image"><img src="assets/images/new_arrivals.jpg" alt="Dragon's Odyssey" /><span class="badge-category">Strategy</span></div>
+                <div class="product-card-body"><h4>Dragon's Odyssey</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-5</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 min</span></div><div class="product-price">₹2,799<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image"><img src="assets/images/category_card.jpg" alt="Stellar Horizons" /><span class="badge-category">Card Game</span></div>
+                <div class="product-card-body"><h4>Stellar Horizons</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-4</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</span></div><div class="product-price">₹999<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image"><img src="assets/images/category_family.jpg" alt="Mystic Grove" /><span class="badge-category">Family</span></div>
+                <div class="product-card-body"><h4>Mystic Grove</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 2-6</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45 min</span></div><div class="product-price">₹1,499<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image"><img src="assets/images/category_puzzle.jpg" alt="Alpine Peaks Puzzle" /><span class="badge-category">Puzzle</span></div>
+                <div class="product-card-body"><h4>Alpine Peaks — 1000pc</h4><div class="product-meta"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 1+</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3-5 hrs</span></div><div class="product-price">₹899<a href="products.html" class="btn btn-primary btn-sm">Add to Cart</a></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 6: HOW IT WORKS ====== -->
+<section class="section bg-surface">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> How It Works</div>
+            <h2>Your Journey to Game Night</h2>
+            <p>From browsing to playing — it's easier than you think.</p>
+        </div>
+        <div class="process-strip animate-on-scroll">
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <h4>Browse</h4>
+                <p>Explore our collection online or visit the store to discover games.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <h4>Pick</h4>
+                <p>Choose from strategy, family, card, puzzle, or RPG categories.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <h4>Play</h4>
+                <p>Try before you buy at our in-store game tables or events.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <h4>Repeat</h4>
+                <p>Join our club, earn rewards, and keep discovering new favorites.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 7: STATS ====== -->
+<section class="section" style="background:linear-gradient(135deg, rgba(22,27,34,0.97) 0%, rgba(13,17,23,0.99) 100%);color:#fff;">
+    <div class="container">
+        <div class="grid grid-4 animate-on-scroll" style="text-align:center;">
+            <div class="stat-item">
+                <div class="stat-value" data-count="2000" data-suffix="+">0</div>
+                <div class="stat-label" style="color:rgba(255,255,255,0.6);">Games in Stock</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" data-count="500" data-suffix="+">0</div>
+                <div class="stat-label" style="color:rgba(255,255,255,0.6);">Events Hosted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" data-count="15000" data-suffix="+">0</div>
+                <div class="stat-label" style="color:rgba(255,255,255,0.6);">Happy Players</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" data-count="50" data-suffix="+">0</div>
+                <div class="stat-label" style="color:rgba(255,255,255,0.6);">Partner Brands</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 8: TESTIMONIALS ====== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> What Players Say</div>
+            <h2>Loved by the Community</h2>
+            <p>Hear from fellow gamers who found their next obsession at Dice & Beyond.</p>
+        </div>
+        <div class="grid grid-3 animate-on-scroll">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="quote">"The staff here really know their games. They recommended Wingspan for our family and we've been playing it every weekend since. Best game store in the city!"</p>
+                <div class="author">
+                    <div class="author-avatar">RP</div>
+                    <div>
+                        <div class="author-name">Rahul Patel</div>
+                        <div class="author-role">Family Gamer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="quote">"Game night Fridays at Dice & Beyond are legendary! Met my entire D&D group here. The selection of dice and miniatures is unmatched. A must-visit for any RPG fan."</p>
+                <div class="author">
+                    <div class="author-avatar">SM</div>
+                    <div>
+                        <div class="author-name">Shreya Menon</div>
+                        <div class="author-role">RPG Enthusiast</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="quote">"I bought a 1000-piece Ravensburger puzzle and it was the most relaxing weekend I've had in months. The puzzle collection here is seriously curated. Highly recommend visiting!"</p>
+                <div class="author">
+                    <div class="author-avatar">AK</div>
+                    <div>
+                        <div class="author-name">Arjun Kumar</div>
+                        <div class="author-role">Puzzle Lover</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SECTION 9: UPCOMING GAME NIGHT ====== -->
+<section class="section bg-surface">
+    <div class="container">
+        <div class="animate-on-scroll" style="background:linear-gradient(135deg, rgba(124,58,237,0.06) 0%, rgba(167,139,250,0.04) 100%);border:1px solid rgba(124,58,237,0.12);border-radius:var(--radius-2xl);padding:3rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;">
+            <div>
+                <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Next Event</div>
+                <h2 style="margin-bottom:0.75rem;">Friday Game Night</h2>
+                <p style="margin-bottom:1rem;font-size:0.9375rem;">Join us this Friday for an epic evening of Settlers of Catan, Ticket to Ride, and more. Snacks provided, friends guaranteed!</p>
+                <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                    <span style="display:inline-flex;align-items:center;gap:0.375rem;font-size:0.8125rem;color:var(--text-muted);font-weight:500;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Sep 5, 2026</span>
+                    <span style="display:inline-flex;align-items:center;gap:0.375rem;font-size:0.8125rem;color:var(--text-muted);font-weight:500;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6:00 PM — 10:00 PM</span>
+                    <span style="display:inline-flex;align-items:center;gap:0.375rem;font-size:0.8125rem;color:var(--text-muted);font-weight:500;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 12 seats left</span>
+                </div>
+                <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                    <a href="events.html" class="btn btn-primary">Register Now — Free</a>
+                    <a href="events.html" class="btn btn-secondary">View All Events</a>
+                </div>
+            </div>
+            <div style="border-radius:var(--radius-2xl);overflow:hidden;aspect-ratio:16/10;">
+                <img src="assets/images/game_night_event.jpg" alt="Game Night Event" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+                .animate-on-scroll[style*="grid-template-columns"] {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
+    </div>
+</section>
+
+<!-- ====== SECTION 10: CTA / NEWSLETTER ====== -->
+<section class="cta-normal-section">
+    <div class="container">
+        <div class="cta-normal-card animate-on-scroll">
+            <div class="cta-normal-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Join the Club
+            </div>
+            <h2 class="cta-normal-title">Ready to Level Up Your Game Night?</h2>
+            <p class="cta-normal-desc">Join the Dice & Beyond Game Club for exclusive discounts, early access to new releases, and invitations to members-only game nights.</p>
+            <div class="cta-normal-actions">
+                <a href="pricing.html" class="btn btn-primary btn-lg">Join the Game Club</a>
+                <a href="contact.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.2);">Contact Us</a>
+            </div>
+            <div class="cta-normal-features">
+                <span class="cta-normal-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 10% off all games</span>
+                <span class="cta-normal-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free event access</span>
+                <span class="cta-normal-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> New release previews</span>
+                <span class="cta-normal-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Members-only lounge</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div id="main-footer"></div>
+
+<script src="components.js"></script>
+</body>
+</html>

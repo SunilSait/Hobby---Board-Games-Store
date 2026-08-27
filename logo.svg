@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="diceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="shadowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Shadow face (bottom-right) -->
+  <path d="M60 75 L95 55 L95 85 L60 105 Z" fill="url(#shadowGrad)" opacity="0.7"/>
+  <!-- Left face -->
+  <path d="M25 55 L60 35 L60 75 L25 95 Z" fill="#7C3AED"/>
+  <!-- Top face -->
+  <path d="M25 55 L60 35 L95 55 L60 75 Z" fill="#A78BFA"/>
+  <!-- Right face -->
+  <path d="M60 75 L95 55 L95 85 L60 105 Z" fill="#6D28D9"/>
+  <!-- Dots on top face -->
+  <circle cx="42" cy="50" r="3.5" fill="#fff" opacity="0.95"/>
+  <circle cx="60" cy="52" r="3.5" fill="#fff" opacity="0.95"/>
+  <circle cx="78" cy="50" r="3.5" fill="#fff" opacity="0.95"/>
+  <circle cx="51" cy="44" r="3.5" fill="#fff" opacity="0.95"/>
+  <circle cx="69" cy="44" r="3.5" fill="#fff" opacity="0.95"/>
+  <!-- Dots on left face -->
+  <circle cx="38" cy="68" r="3" fill="#fff" opacity="0.7"/>
+  <circle cx="47" cy="62" r="3" fill="#fff" opacity="0.7"/>
+  <circle cx="38" cy="80" r="3" fill="#fff" opacity="0.7"/>
+  <circle cx="47" cy="74" r="3" fill="#fff" opacity="0.7"/>
+  <!-- Dots on right face -->
+  <circle cx="73" cy="72" r="2.5" fill="#fff" opacity="0.5"/>
+  <circle cx="82" cy="66" r="2.5" fill="#fff" opacity="0.5"/>
+  <circle cx="73" cy="84" r="2.5" fill="#fff" opacity="0.5"/>
+  <!-- Small star accent -->
+  <path d="M18 30 L20 24 L22 30 L28 32 L22 34 L20 40 L18 34 L12 32 Z" fill="#A78BFA" opacity="0.6"/>
+  <path d="M90 20 L91.5 16 L93 20 L97 21.5 L93 23 L91.5 27 L90 23 L86 21.5 Z" fill="#7C3AED" opacity="0.4"/>
+</svg>
