@@ -18,6 +18,7 @@ const ICONS = {
     facebook: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>',
     instagram: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>',
     youtube: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>',
+    whatsapp: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
     discord: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/><path d="M18 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/><path d="M7.5 7.5c3.5-1 5.5-1 9 0"/><path d="M7 16.5c3.5 1 6.5 1 10 0"/><path d="M15.5 17c0 1 1.5 3 2 3 1.5 0 2.833-1.667 3.5-3 .667-1.667.5-5.833-1.5-11.5-1.457-1.015-3-1.34-4.5-1.5l-1 2.5"/><path d="M8.5 17c0 1-1.356 3-1.832 3-1.429 0-2.698-1.667-3.333-3-.635-1.667-.476-5.833 1.428-11.5C6.151 4.485 7.545 4.16 9 4l1 2.5"/></svg>',
     rocket: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4.5C7.5 6 10 5.5 10 5.5"/><path d="M12 15v5s3.03-.55 4.5-2c1.5-1.5 2-4.5 2-4.5"/></svg>',
 };
@@ -118,14 +119,14 @@ function injectNav() {
                 <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
                 <a href="products.html" class="btn btn-primary btn-sm">Shop Now</a>
                 <!-- Mobile Hamburger -->
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu(event)" aria-label="Open menu">
                     <span class="mobile-menu-icon">${ICONS.menu}</span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Backdrop -->
-        <div class="mobile-backdrop" id="mobile-backdrop" onclick="toggleMobileMenu()"></div>
+        <div class="mobile-backdrop" id="mobile-backdrop" onclick="toggleMobileMenu(event)"></div>
 
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
@@ -147,7 +148,10 @@ function injectNav() {
     <div class="navbar-spacer"></div>`;
 }
 
-function toggleMobileMenu() {
+function toggleMobileMenu(e) {
+    if (e && e.stopPropagation) {
+        e.stopPropagation();
+    }
     const menu = document.getElementById('mobile-menu');
     const backdrop = document.getElementById('mobile-backdrop');
     const iconEl = document.querySelector('.mobile-menu-icon');
@@ -170,12 +174,15 @@ document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobile-menu');
     const backdrop = document.getElementById('mobile-backdrop');
     const btn = document.querySelector('.mobile-menu-btn');
-    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && btn && !btn.contains(e.target)) {
-        menu.classList.remove('open');
-        if (backdrop) backdrop.classList.remove('open');
-        const iconEl = document.querySelector('.mobile-menu-icon');
-        if (iconEl) iconEl.innerHTML = ICONS.menu;
-    }
+    if (!menu || !menu.classList.contains('open')) return;
+
+    if (btn && (btn === e.target || btn.contains(e.target))) return;
+    if (menu.contains(e.target)) return;
+
+    menu.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
+    const iconEl = document.querySelector('.mobile-menu-icon');
+    if (iconEl) iconEl.innerHTML = ICONS.menu;
 });
 
 /* ─── FOOTER ─────────────────────────────────────────── */
@@ -186,27 +193,27 @@ function injectFooter() {
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Brand -->
+                <!-- Column 1: Brand & Socials -->
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem;" aria-label="Dice & Beyond Home">
+                    <a href="index.html" class="nav-logo footer-logo" aria-label="Dice & Beyond Home">
                         ${getLogoSVG(40)}
                         <div class="nav-logo-text">
                             <span class="brand-top" style="color:#fff;">DICE</span>
                             <span class="brand-bottom">& Beyond</span>
                         </div>
                     </a>
-                    <p>Your destination for board games, card games, puzzles, and RPG accessories. From strategy enthusiasts to family game nights — we have something for everyone.</p>
+                    <p>Your premier destination for tabletop games, strategy classics, RPG accessories, and unforgettable family game nights.</p>
                     <div class="footer-socials">
                         <a href="#" class="footer-social-link" aria-label="Facebook">${ICONS.facebook}</a>
                         <a href="#" class="footer-social-link" aria-label="Instagram">${ICONS.instagram}</a>
                         <a href="#" class="footer-social-link" aria-label="YouTube">${ICONS.youtube}</a>
-                        <a href="#" class="footer-social-link" aria-label="Discord">${ICONS.discord}</a>
+                        <a href="#" class="footer-social-link" aria-label="WhatsApp">${ICONS.whatsapp}</a>
                     </div>
                 </div>
 
                 <!-- Column 2: Quick Links -->
-                <div>
-                    <h4 class="footer-col-title">Quick Links</h4>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">QUICK LINKS</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="home2.html">Home 2 — Premium</a></li>
@@ -219,8 +226,8 @@ function injectFooter() {
                 </div>
 
                 <!-- Column 3: Resources -->
-                <div>
-                    <h4 class="footer-col-title">Resources</h4>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">RESOURCES</h4>
                     <ul class="footer-links">
                         <li><a href="coming-soon.html">Blog & Tips</a></li>
                         <li><a href="coming-soon.html">Careers</a></li>
@@ -231,11 +238,11 @@ function injectFooter() {
                     </ul>
                 </div>
 
-                <!-- Column 4: Newsletter -->
-                <div>
-                    <div class="footer-newsletter">
-                        <h4>Stay in the Loop</h4>
-                        <p>Get game night invites, new arrivals & exclusive offers.</p>
+                <!-- Column 4: Stay Updated Card -->
+                <div class="footer-col footer-col-newsletter">
+                    <div class="footer-newsletter-card">
+                        <h4 class="footer-newsletter-title">Stay Updated</h4>
+                        <p class="footer-newsletter-desc">Get game releases, event invites, tournaments & exclusive offers.</p>
                         <form onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();" class="footer-newsletter-form">
                             <input type="email" placeholder="your@email.com" class="footer-newsletter-input" required>
                             <button type="submit" class="footer-newsletter-btn">Subscribe</button>
@@ -246,7 +253,7 @@ function injectFooter() {
 
             <!-- Bottom Bar -->
             <div class="footer-bottom">
-                <p>&copy; ${new Date().getFullYear()} DICE & BEYOND. All rights reserved.</p>
+                <p class="footer-copyright">&copy; ${new Date().getFullYear()} DICE & BEYOND. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>
@@ -388,7 +395,7 @@ function initHeroSlider() {
     const track = document.getElementById('hero-slides-track');
     if (!track) return;
 
-    const slides = track.querySelectorAll('.hero-slide');
+    const slides = track.querySelectorAll('.hero-slide, .hero-split-slide');
     const dots = document.querySelectorAll('.hero-dot');
     const prevBtn = document.getElementById('hero-prev');
     const nextBtn = document.getElementById('hero-next');

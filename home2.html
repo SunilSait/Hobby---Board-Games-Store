@@ -11,22 +11,161 @@
 <body>
 <div id="main-nav"></div>
 
-<!-- ====== S1: HERO (Gradient Mesh + Animated Text) ====== -->
-<section class="hero" style="background:linear-gradient(135deg, #0D1117 0%, #1a1030 40%, #0D1117 80%);min-height:92vh;">
-    <div class="hero-bg" style="opacity:0.35;">
-        <img src="assets/images/hero_bg_home2.jpg" alt="Premium board game lounge" />
-    </div>
-    <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(160deg, rgba(124,58,237,0.12) 0%, transparent 40%, rgba(167,139,250,0.08) 80%);"></div>
-    <!-- Gradient mesh decorations -->
-    <div style="position:absolute;top:10%;right:5%;width:min(500px,60vw);height:min(500px,60vw);background:radial-gradient(circle,rgba(124,58,237,0.15),transparent 70%);border-radius:50%;z-index:1;"></div>
-    <div style="position:absolute;bottom:10%;left:5%;width:min(350px,45vw);height:min(350px,45vw);background:radial-gradient(circle,rgba(167,139,250,0.1),transparent 70%);border-radius:50%;z-index:1;"></div>
-    <div class="container hero-content" style="text-align:center;max-width:800px;margin:0 auto;padding:0 1.25rem;">
-        <div class="badge" style="margin-bottom:1.25rem;animation:fadeInDown 0.6s ease;">Premium Collection</div>
-        <h1 style="color:#fff;margin-bottom:1.25rem;font-size:clamp(2.25rem,5.5vw,3.75rem);animation:fadeInUp 0.7s ease;">Where Every Game Night Becomes <span style="color:#A78BFA;">Legendary</span></h1>
-        <p style="color:rgba(255,255,255,0.82);font-size:1.125rem;max-width:600px;margin:0 auto 2.25rem;animation:fadeInUp 0.8s ease;">Curated collections, expert recommendations, and an immersive store experience for the most discerning tabletop enthusiasts.</p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.9s ease;">
-            <a href="products.html" class="btn btn-primary btn-lg">Explore Collection</a>
-            <a href="pricing.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.25);">Membership Plans</a>
+<!-- ====== S1: HERO (3-Slide Split Layout Slider) ====== -->
+<section class="hero hero-home2" id="hero-section" style="background:linear-gradient(135deg, #0B0F14 0%, #170E28 50%, #0B0F14 100%);min-height:76vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:4.25rem 0 2.5rem;">
+    <!-- Gradient mesh ambient decorations -->
+    <div style="position:absolute;top:10%;right:5%;width:min(550px,65vw);height:min(550px,65vw);background:radial-gradient(circle,rgba(124,58,237,0.18),transparent 70%);border-radius:50%;z-index:1;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:10%;left:5%;width:min(400px,50vw);height:min(400px,50vw);background:radial-gradient(circle,rgba(167,139,250,0.12),transparent 70%);border-radius:50%;z-index:1;pointer-events:none;"></div>
+
+    <div class="container" style="position:relative;z-index:2;width:100%;">
+        <!-- Slides Track -->
+        <div id="hero-slides-track">
+
+            <!-- Slide 1: Home & Products Showcase (Game of the Week, New Arrivals, 5 Categories) -->
+            <div class="hero-split-slide active">
+                <div class="grid grid-2" style="align-items:center;gap:3.5rem;">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="badge" style="margin-bottom:1.25rem;">Game of the Week & 5 Categories</div>
+                        <h1 style="color:#fff;margin-bottom:1.25rem;font-size:clamp(2.25rem,4.2vw,3.5rem);line-height:1.15;">Game of the Week, New Arrivals & <span style="color:#A78BFA;">5 Categories</span></h1>
+                        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem;line-height:1.6;">Explore over 2,000 titles organized across Strategy, Card Games, Family, Puzzles, and RPG Accessories. Check out our featured Game of the Week and newest arrivals fresh on the shelves.</p>
+                        <div style="display:flex;gap:0.875rem;flex-wrap:wrap;margin-bottom:2.25rem;">
+                            <a href="products.html" class="btn btn-primary btn-lg">Explore 5 Categories</a>
+                            <a href="index.html#gotw" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.25);">Game of the Week</a>
+                        </div>
+                        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);">
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Strategy, Card, Family, Puzzle & RPG
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Game of the Week Spotlight
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Fresh Weekly New Arrivals
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div style="position:relative;">
+                        <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(124,58,237,0.25);border:1px solid rgba(167,139,250,0.25);">
+                            <img src="assets/images/hero2_slide_products.jpg" alt="Dice & Beyond Board Game Categories & Showcase Releases" style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;" />
+                            <div style="position:absolute;inset:0;background:linear-gradient(180deg, transparent 65%, rgba(11,15,20,0.8) 100%);"></div>
+                        </div>
+                        <div style="position:absolute;bottom:-1.25rem;left:-1.25rem;background:rgba(19,26,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(124,58,237,0.35);border-radius:var(--radius-xl);padding:0.875rem 1.25rem;display:flex;align-items:center;gap:0.875rem;box-shadow:0 12px 32px rgba(0,0,0,0.55);">
+                            <div class="icon-box icon-box-solid" style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:#fff;">2,000+ Curated Titles</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);">Strategy • Card • Family • Puzzle • RPG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Recommendations (By Player Count & Age Group) -->
+            <div class="hero-split-slide">
+                <div class="grid grid-2" style="align-items:center;gap:3.5rem;">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="badge" style="margin-bottom:1.25rem;">Player Count & Age Matcher</div>
+                        <h1 style="color:#fff;margin-bottom:1.25rem;font-size:clamp(2.25rem,4.2vw,3.5rem);line-height:1.15;">Find the Perfect Game by <span style="color:#A78BFA;">Player Count & Age</span></h1>
+                        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem;line-height:1.6;">Not sure what to play? Our dedicated recommendations guide helps you find ideal games categorized by group size (solo, couples, 3-4 players, party 5+) and age groups (kids, teens, adults).</p>
+                        <div style="display:flex;gap:0.875rem;flex-wrap:wrap;margin-bottom:2.25rem;">
+                            <a href="recommendations.html" class="btn btn-primary btn-lg">Browse Recommendations</a>
+                            <a href="recommendations.html#player-count" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.25);">Filter by Player Count</a>
+                        </div>
+                        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);">
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Solo, Couples & Party (1–8+ Players)
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Age-Matched Guides (Kids to Adults)
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Fast Matchmaking Suggestions
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div style="position:relative;">
+                        <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(124,58,237,0.25);border:1px solid rgba(167,139,250,0.25);">
+                            <img src="assets/images/hero2_slide_recommendations.jpg" alt="Group Playing Recommended Tabletop Game in Lounge" style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;" />
+                            <div style="position:absolute;inset:0;background:linear-gradient(180deg, transparent 65%, rgba(11,15,20,0.8) 100%);"></div>
+                        </div>
+                        <div style="position:absolute;bottom:-1.25rem;left:-1.25rem;background:rgba(19,26,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(124,58,237,0.35);border-radius:var(--radius-xl);padding:0.875rem 1.25rem;display:flex;align-items:center;gap:0.875rem;box-shadow:0 12px 32px rgba(0,0,0,0.55);">
+                            <div class="icon-box icon-box-solid" style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:#fff;">Smart Matchmaker</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);">Curated by Player Count & Age</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Game Nights Events & Contact / Club & Bulk Order Enquiries -->
+            <div class="hero-split-slide">
+                <div class="grid grid-2" style="align-items:center;gap:3.5rem;">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="badge" style="margin-bottom:1.25rem;">In-Store Events & Club Enquiries</div>
+                        <h1 style="color:#fff;margin-bottom:1.25rem;font-size:clamp(2.25rem,4.2vw,3.5rem);line-height:1.15;">Weekly Game Nights & <span style="color:#A78BFA;">Club or Bulk Orders</span></h1>
+                        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem;line-height:1.6;">Join upcoming in-store gaming sessions, check our store location and opening timings, or submit an enquiry for private board game club hosting and bulk orders.</p>
+                        <div style="display:flex;gap:0.875rem;flex-wrap:wrap;margin-bottom:2.25rem;">
+                            <a href="events.html" class="btn btn-primary btn-lg">Upcoming Game Nights</a>
+                            <a href="contact.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.25);">Store Info & Bulk Enquiry</a>
+                        </div>
+                        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);">
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Weekly In-Store Sessions
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Store Location & Daily Timings
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.8);font-size:0.875rem;font-weight:500;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Club & Bulk Order Enquiry Form
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div style="position:relative;">
+                        <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(124,58,237,0.25);border:1px solid rgba(167,139,250,0.25);">
+                            <img src="assets/images/hero2_slide_events.jpg" alt="Dice & Beyond In-Store Tournament and Game Night Session" style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;" />
+                            <div style="position:absolute;inset:0;background:linear-gradient(180deg, transparent 65%, rgba(11,15,20,0.8) 100%);"></div>
+                        </div>
+                        <div style="position:absolute;bottom:-1.25rem;left:-1.25rem;background:rgba(19,26,34,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(124,58,237,0.35);border-radius:var(--radius-xl);padding:0.875rem 1.25rem;display:flex;align-items:center;gap:0.875rem;box-shadow:0 12px 32px rgba(0,0,0,0.55);">
+                            <div class="icon-box icon-box-solid" style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:#fff;">Store Desk & Events Hub</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);">Open Daily 10 AM – 10 PM • Enquiries</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="hero-slider-dots" id="hero-dots" style="position:relative;bottom:auto;margin-top:2.5rem;justify-content:center;">
+            <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
         </div>
     </div>
 </section>
@@ -68,11 +207,11 @@
             <p>The hottest titles flying off our shelves this month.</p>
         </div>
         <div class="bento-grid animate-on-scroll">
-            <div class="bento-item"><img src="assets/images/category_strategy.jpg" alt="Strategy Games Trending" /><div class="bento-overlay"><div><h4>Strategy Legends</h4><span>₹2,499 — ₹4,999</span></div></div></div>
-            <div class="bento-item"><img src="assets/images/category_card.jpg" alt="Card Games Trending" /><div class="bento-overlay"><div><h4>Card Showdowns</h4><span>₹499 — ₹1,999</span></div></div></div>
-            <div class="bento-item"><img src="assets/images/category_rpg.jpg" alt="RPG Sets Trending" /><div class="bento-overlay"><div><h4>RPG Adventures</h4><span>₹999 — ₹3,499</span></div></div></div>
-            <div class="bento-item"><img src="assets/images/game_of_week.jpg" alt="Featured Game" /><div class="bento-overlay"><div><h4>Fortress of Ages</h4><span>₹3,499</span></div></div></div>
-            <div class="bento-item"><img src="assets/images/category_family.jpg" alt="Family Games" /><div class="bento-overlay"><div><h4>Family Favorites</h4><span>₹799 — ₹2,499</span></div></div></div>
+            <div class="bento-item"><img src="assets/images/bento_strategy_legends.jpg" alt="Strategy Legends Trending Board Game" /><div class="bento-overlay"><div><h4>Strategy Legends</h4><span>₹2,499 — ₹4,999</span></div></div></div>
+            <div class="bento-item"><img src="assets/images/bento_card_showdowns.jpg" alt="Card Showdowns Tournament Cards" /><div class="bento-overlay"><div><h4>Card Showdowns</h4><span>₹499 — ₹1,999</span></div></div></div>
+            <div class="bento-item"><img src="assets/images/bento_rpg_adventures.jpg" alt="RPG Adventures Tabletop Campaign" /><div class="bento-overlay"><div><h4>RPG Adventures</h4><span>₹999 — ₹3,499</span></div></div></div>
+            <div class="bento-item"><img src="assets/images/bento_stellar_horizons.jpg" alt="Stellar Horizons Sci-Fi Fleet Warfare" /><div class="bento-overlay"><div><h4>Stellar Horizons</h4><span>₹3,499</span></div></div></div>
+            <div class="bento-item"><img src="assets/images/bento_family_favorites.jpg" alt="Family Favorites Board Game Gathering" /><div class="bento-overlay"><div><h4>Family Favorites</h4><span>₹799 — ₹2,499</span></div></div></div>
         </div>
     </div>
 </section>
@@ -86,29 +225,70 @@
             <p>Our staff's favorite games — tried, tested, and loved.</p>
         </div>
         <div class="grid grid-3 animate-on-scroll">
-            <div class="card" style="text-align:center;">
-                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--font-heading);font-weight:600;color:var(--primary);font-size:1.125rem;">AJ</div>
-                <h4 style="margin-bottom:0.25rem;">Arun's Pick</h4>
-                <p style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;">Store Manager</p>
-                <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;"><img src="assets/images/category_strategy.jpg" alt="Arun's pick - Twilight Imperium" class="img-cover" /></div>
-                <h4 style="font-size:1rem;margin-bottom:0.375rem;">Twilight Imperium</h4>
-                <p style="font-size:0.8125rem;color:var(--text-muted);">"The ultimate sci-fi epic. Expect 6+ hours of diplomacy, war, and galactic domination."</p>
+            <div class="card" style="padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;">
+                <div>
+                    <!-- Staff Header -->
+                    <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border-light);">
+                        <div style="width:3rem;height:3rem;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--primary),#A78BFA);flex-shrink:0;box-shadow:0 0 12px rgba(124,58,237,0.25);">
+                            <img src="assets/images/staff_arun.jpg" alt="Arun - Store Manager" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;" />
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:0.125rem;font-size:0.9375rem;line-height:1.2;">Arun's Pick</h4>
+                            <div style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">Store Manager</div>
+                        </div>
+                    </div>
+                    <!-- Game Showcase Image -->
+                    <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+                        <img src="assets/images/pick_twilight_imperium.jpg" alt="Arun's pick - Twilight Imperium Tabletop Session" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    <!-- Details -->
+                    <h4 style="font-size:1.0625rem;margin-bottom:0.375rem;">Twilight Imperium</h4>
+                    <p style="font-size:0.84375rem;color:var(--text-muted);line-height:1.6;margin:0;">"The ultimate sci-fi epic. Expect 6+ hours of diplomacy, war, and galactic domination."</p>
+                </div>
             </div>
-            <div class="card" style="text-align:center;">
-                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--font-heading);font-weight:600;color:var(--primary);font-size:1.125rem;">NK</div>
-                <h4 style="margin-bottom:0.25rem;">Neha's Pick</h4>
-                <p style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;">Events Coordinator</p>
-                <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;"><img src="assets/images/category_family.jpg" alt="Neha's pick - Wingspan" class="img-cover" /></div>
-                <h4 style="font-size:1rem;margin-bottom:0.375rem;">Wingspan</h4>
-                <p style="font-size:0.8125rem;color:var(--text-muted);">"Beautiful, relaxing, and surprisingly deep. Perfect for family game nights or solo play."</p>
+
+            <div class="card" style="padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;">
+                <div>
+                    <!-- Staff Header -->
+                    <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border-light);">
+                        <div style="width:3rem;height:3rem;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--primary),#A78BFA);flex-shrink:0;box-shadow:0 0 12px rgba(124,58,237,0.25);">
+                            <img src="assets/images/staff_neha.jpg" alt="Neha - Events Coordinator" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;" />
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:0.125rem;font-size:0.9375rem;line-height:1.2;">Neha's Pick</h4>
+                            <div style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">Events Coordinator</div>
+                        </div>
+                    </div>
+                    <!-- Game Showcase Image -->
+                    <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+                        <img src="assets/images/pick_wingspan.jpg" alt="Neha's pick - Wingspan Board Game" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    <!-- Details -->
+                    <h4 style="font-size:1.0625rem;margin-bottom:0.375rem;">Wingspan</h4>
+                    <p style="font-size:0.84375rem;color:var(--text-muted);line-height:1.6;margin:0;">"Beautiful, relaxing, and surprisingly deep. Perfect for family game nights or solo play."</p>
+                </div>
             </div>
-            <div class="card" style="text-align:center;">
-                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--font-heading);font-weight:600;color:var(--primary);font-size:1.125rem;">RV</div>
-                <h4 style="margin-bottom:0.25rem;">Ravi's Pick</h4>
-                <p style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;">RPG Specialist</p>
-                <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;"><img src="assets/images/category_rpg.jpg" alt="Ravi's pick - Gloomhaven" class="img-cover" /></div>
-                <h4 style="font-size:1rem;margin-bottom:0.375rem;">Gloomhaven</h4>
-                <p style="font-size:0.8125rem;color:var(--text-muted);">"A dungeon-crawling masterpiece. 100+ hours of tactical combat and story-driven campaigns."</p>
+
+            <div class="card" style="padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;">
+                <div>
+                    <!-- Staff Header -->
+                    <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border-light);">
+                        <div style="width:3rem;height:3rem;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--primary),#A78BFA);flex-shrink:0;box-shadow:0 0 12px rgba(124,58,237,0.25);">
+                            <img src="assets/images/staff_ravi.jpg" alt="Ravi - RPG Specialist" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;" />
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:0.125rem;font-size:0.9375rem;line-height:1.2;">Ravi's Pick</h4>
+                            <div style="font-size:0.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">RPG Specialist</div>
+                        </div>
+                    </div>
+                    <!-- Game Showcase Image -->
+                    <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+                        <img src="assets/images/pick_gloomhaven.jpg" alt="Ravi's pick - Gloomhaven Dungeon Crawler Session" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    <!-- Details -->
+                    <h4 style="font-size:1.0625rem;margin-bottom:0.375rem;">Gloomhaven</h4>
+                    <p style="font-size:0.84375rem;color:var(--text-muted);line-height:1.6;margin:0;">"A dungeon-crawling masterpiece. 100+ hours of tactical combat and story-driven campaigns."</p>
+                </div>
             </div>
         </div>
     </div>
@@ -124,11 +304,11 @@
         </div>
         <div class="animate-on-scroll">
             <div class="zigzag-row">
-                <div class="zigzag-image"><img src="assets/images/category_strategy.jpg" alt="Strategy Games" /></div>
+                <div class="zigzag-image"><img src="assets/images/zigzag_strategy_games.jpg" alt="Strategy Games Tabletop Session" /></div>
                 <div><div class="section-label">Strategy Games</div><h3 style="margin-bottom:0.75rem;">Think. Plan. Conquer.</h3><p style="margin-bottom:1rem;">From euro-style resource management to area control warfare — strategy games test your tactical mind. Explore titles like Terraforming Mars, Scythe, and Brass: Birmingham.</p><a href="products.html" class="btn btn-primary btn-sm">Browse Strategy</a></div>
             </div>
             <div class="zigzag-row reverse">
-                <div class="zigzag-image"><img src="assets/images/category_puzzle.jpg" alt="Puzzles" /></div>
+                <div class="zigzag-image"><img src="assets/images/zigzag_puzzle_showcase.jpg" alt="Puzzles and Brain Teasers Assembly" /></div>
                 <div><div class="section-label">Puzzles & Brain Teasers</div><h3 style="margin-bottom:0.75rem;">Piece by Piece Perfection.</h3><p style="margin-bottom:1rem;">Unwind with premium jigsaw puzzles from Ravensburger, brain-teasing mechanical puzzles, and 3D architectural models. From 500 to 5,000 pieces.</p><a href="products.html" class="btn btn-primary btn-sm">Browse Puzzles</a></div>
             </div>
         </div>
@@ -160,98 +340,237 @@
     </div>
 </section>
 
-<!-- ====== S7: COMMUNITY STATS (Gradient Text) ====== -->
-<section class="section" style="background:linear-gradient(135deg, #0D1117 0%, #1a1030 50%, #0D1117 100%);padding:5rem 0;">
+<!-- ====== S7: COMMUNITY STATS ====== -->
+<section class="community-stats-section">
     <div class="container">
         <div style="text-align:center;margin-bottom:3rem;" class="animate-on-scroll">
-            <div class="section-label" style="color:#A78BFA;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Our Community</div>
-            <h2 style="color:#fff;margin-bottom:0.75rem;">A Growing Family of Gamers</h2>
-            <p style="color:rgba(255,255,255,0.6);max-width:500px;margin:0 auto;">Numbers that tell our story.</p>
+            <div class="section-label stats-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Our Community</div>
+            <h2>A Growing Family of Gamers</h2>
+            <p class="stats-sub">Numbers that tell our story.</p>
         </div>
         <div class="grid grid-4 animate-on-scroll" style="text-align:center;">
-            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="2847" data-suffix="+">0</div><div style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-weight:500;">Titles In Stock</div></div>
-            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="680" data-suffix="">0</div><div style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-weight:500;">Events Completed</div></div>
-            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="18500" data-suffix="+">0</div><div style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-weight:500;">Community Members</div></div>
-            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="4" data-suffix=".9★">0</div><div style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-weight:500;">Average Rating</div></div>
+            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="2847" data-suffix="+">0</div><div class="stat-desc">Titles In Stock</div></div>
+            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="680" data-suffix="">0</div><div class="stat-desc">Events Completed</div></div>
+            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="18500" data-suffix="+">0</div><div class="stat-desc">Community Members</div></div>
+            <div><div style="font-family:var(--font-heading);font-weight:600;font-size:3rem;background:linear-gradient(135deg,#A78BFA,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:0.375rem;" data-count="4" data-suffix=".9★">0</div><div class="stat-desc">Average Rating</div></div>
         </div>
     </div>
 </section>
 
-<!-- ====== S8: LATEST REVIEWS (Magazine Layout) ====== -->
-<section class="section">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Latest Reviews</div>
-            <h2>From the Community</h2>
-            <p>What our customers are saying about their latest purchases.</p>
+<!-- ====== S8: CUSTOMER TESTIMONIALS (Glassmorphism Glow Cards) ====== -->
+<section class="testimonials-section">
+    <!-- Ambient glow spheres -->
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="section-header animate-on-scroll" style="text-align:center;">
+            <div class="section-label" style="justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Verified Testimonials</div>
+            <h2>Loved by Tabletop Gamers</h2>
+            <p style="max-width:550px;margin:0 auto;">Read genuine reviews from board game enthusiasts across our community.</p>
         </div>
-        <div class="magazine-layout animate-on-scroll">
-            <div class="magazine-featured">
-                <img src="assets/images/game_night_event.jpg" alt="Featured Review - Game Night" />
-                <div class="magazine-overlay">
-                    <div>
-                        <span class="badge" style="margin-bottom:0.75rem;">Featured Review</span>
-                        <h3>"Best Game Store Experience in India"</h3>
-                        <p>Priya Sharma — "The atmosphere, the selection, the staff — everything about Dice & Beyond screams quality. I've been a member for 6 months and it's the best decision I made."</p>
+        <div class="grid grid-3 animate-on-scroll">
+            <!-- Testimonial 1 -->
+            <div class="glass-testimonial-card">
+                <svg class="card-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div>
+                    <div class="author-badge">
+                        <div class="avatar-ring"><img src="assets/images/avatar_priya_sharma.jpg" alt="Priya Sharma" /></div>
+                        <div>
+                            <div class="author-name">Priya Sharma</div>
+                            <div class="author-role">Strategy Club Member</div>
+                            <span class="verified-pill"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Member</span>
+                        </div>
                     </div>
+                    <div class="rating-row">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <span class="rating-score">5.0 / 5.0</span>
+                    </div>
+                    <p class="quote-text">"The atmosphere, the curation, and the expert staff — everything about Dice & Beyond screams quality. I've been a member for 6 months and game nights are always the highlight of my week."</p>
+                </div>
+                <div class="game-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    Friday Night Leagues
                 </div>
             </div>
-            <div class="magazine-side">
-                <div class="magazine-small">
-                    <img src="assets/images/category_puzzle.jpg" alt="Puzzle review" />
-                    <div class="magazine-small-body">
-                        <h4>"Puzzle Paradise"</h4>
-                        <p>Vikram R. — "The puzzle selection here is insane. Found rare Ravensburger sets I couldn't get anywhere else."</p>
+
+            <!-- Testimonial 2 -->
+            <div class="glass-testimonial-card">
+                <svg class="card-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div>
+                    <div class="author-badge">
+                        <div class="avatar-ring"><img src="assets/images/avatar_vikram_rao.jpg" alt="Vikram Rao" /></div>
+                        <div>
+                            <div class="author-name">Vikram Rao</div>
+                            <div class="author-role">Puzzle & Strategy Enthusiast</div>
+                            <span class="verified-pill"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Buyer</span>
+                        </div>
                     </div>
+                    <div class="rating-row">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <span class="rating-score">5.0 / 5.0</span>
+                    </div>
+                    <p class="quote-text">"The puzzle and strategy collection here is phenomenal. I found rare imported titles and custom wooden mechanical sets that aren't available anywhere else in India. Fast delivery too!"</p>
                 </div>
-                <div class="magazine-small">
-                    <img src="assets/images/new_arrivals.jpg" alt="New arrivals review" />
-                    <div class="magazine-small-body">
-                        <h4>"Always Something New"</h4>
-                        <p>Ananya D. — "I love that they get new stock every week. The 'New Arrivals' shelf is always exciting."</p>
-                    </div>
+                <div class="game-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                    Custom Puzzles & Strategy
                 </div>
-                <div class="magazine-small">
-                    <img src="assets/images/store_interior.jpg" alt="Store review" />
-                    <div class="magazine-small-body">
-                        <h4>"A Gamer's Heaven"</h4>
-                        <p>Karthik M. — "The in-store play area is great. Spent a whole Saturday testing games before buying."</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="glass-testimonial-card">
+                <svg class="card-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div>
+                    <div class="author-badge">
+                        <div class="avatar-ring"><img src="assets/images/avatar_ananya_das.jpg" alt="Ananya Das" /></div>
+                        <div>
+                            <div class="author-name">Ananya Das</div>
+                            <div class="author-role">Community Regular</div>
+                            <span class="verified-pill"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Verified Member</span>
+                        </div>
                     </div>
+                    <div class="rating-row">
+                        <div class="rating-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <span class="rating-score">5.0 / 5.0</span>
+                    </div>
+                    <p class="quote-text">"I love that they stock fresh new arrivals every single week. The in-store play area and recommendation engine made finding our group's favorite cooperative campaign so easy!"</p>
+                </div>
+                <div class="game-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    Cooperative Games Hub
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== S9: STORE GALLERY (Mosaic Grid) ====== -->
-<section class="section bg-surface">
+<!-- ====== S9: FINAL CTA (Redesigned Modern Experience) ====== -->
+<section class="final-cta-section">
     <div class="container">
-        <div class="section-header animate-on-scroll">
-            <div class="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Inside Our Store</div>
-            <h2>Step Into Dice & Beyond</h2>
-            <p>A peek inside our game-filled world.</p>
-        </div>
-        <div class="mosaic-grid animate-on-scroll">
-            <div class="mosaic-item"><img src="assets/images/store_interior.jpg" alt="Store interior shelves" /></div>
-            <div class="mosaic-item"><img src="assets/images/game_night_event.jpg" alt="Game night in store" /></div>
-            <div class="mosaic-item"><img src="assets/images/store_exterior.jpg" alt="Store exterior at dusk" /></div>
-            <div class="mosaic-item"><img src="assets/images/new_arrivals.jpg" alt="New arrivals display" /></div>
-            <div class="mosaic-item"><img src="assets/images/category_rpg.jpg" alt="RPG corner" /></div>
-        </div>
-    </div>
-</section>
+        <div class="home2-cta-card animate-on-scroll">
+            <div class="home2-cta-grid">
+                <!-- Left Column: Content & Actions -->
+                <div class="home2-cta-content">
+                    <div class="home2-cta-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Start Your Adventure
+                    </div>
+                    <h2 class="home2-cta-title">Ready to Discover <span class="gradient-text">Your Next Favorite Game?</span></h2>
+                    <p class="home2-cta-desc">Visit our experiential board game lounge, browse 2,000+ handpicked tabletop titles online, or connect with our master game curators for personalized group matchmaking.</p>
+                    <div class="home2-cta-actions">
+                        <a href="products.html" class="btn btn-primary btn-lg" style="box-shadow:0 8px 24px rgba(124,58,237,0.4);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.35rem;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Shop the Collection
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-lg" style="color:#fff;background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.35rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Visit Store & Lounge
+                        </a>
+                    </div>
+                    <div class="home2-cta-features">
+                        <div class="home2-cta-feat-item">
+                            <span class="home2-cta-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Free Shipping on Orders ₹999+</span>
+                        </div>
+                        <div class="home2-cta-feat-item">
+                            <span class="home2-cta-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Try-Before-Buy Play Library</span>
+                        </div>
+                        <div class="home2-cta-feat-item">
+                            <span class="home2-cta-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Weekly Tournaments & Meetups</span>
+                        </div>
+                        <div class="home2-cta-feat-item">
+                            <span class="home2-cta-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>100% Genuine Box Guarantee</span>
+                        </div>
+                    </div>
+                </div>
 
-<!-- ====== S10: FINAL CTA (Gradient Background) ====== -->
-<section style="padding:5rem 0 5.5rem;background:linear-gradient(135deg, #1a1030 0%, #0D1117 50%, #1a1030 100%);position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15),transparent 70%);pointer-events:none;"></div>
-    <div class="container" style="position:relative;z-index:2;text-align:center;">
-        <div class="animate-on-scroll">
-            <div class="badge" style="margin-bottom:1.25rem;">Start Your Adventure</div>
-            <h2 style="color:#fff;font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto;">Ready to Discover Your Next Favorite Game?</h2>
-            <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:550px;margin:0 auto 2.25rem;">Visit our store, browse online, or chat with our team. Your game night is about to get a serious upgrade.</p>
-            <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-                <a href="products.html" class="btn btn-primary btn-lg">Shop the Collection</a>
-                <a href="contact.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.2);">Visit Us</a>
+                <!-- Right Column: Interactive Community & Lounge Card -->
+                <div>
+                    <div class="home2-cta-showcase">
+                        <div class="home2-showcase-top">
+                            <div class="home2-community-group">
+                                <div class="home2-community-avatars">
+                                    <img src="assets/images/avatar_priya_sharma.jpg" alt="Member Priya" />
+                                    <img src="assets/images/avatar_vikram_rao.jpg" alt="Member Vikram" />
+                                    <img src="assets/images/avatar_ananya_das.jpg" alt="Member Ananya" />
+                                    <div class="home2-avatar-count">+18k</div>
+                                </div>
+                                <div class="home2-community-text">
+                                    <div class="home2-community-title">Active Community</div>
+                                    <div class="home2-community-sub">18,500+ Gamers</div>
+                                </div>
+                            </div>
+                            <div class="home2-status-pill">
+                                <span class="home2-status-dot"></span>
+                                Store Open Today
+                            </div>
+                        </div>
+
+                        <div class="home2-showcase-card">
+                            <img src="assets/images/store_interior.jpg" alt="Dice & Beyond Board Game Store & Cafe Lounge" />
+                            <div class="home2-showcase-badge">
+                                <span class="badge-star">★</span> 4.9 <span class="badge-count">(520+)</span>
+                            </div>
+                            <div class="home2-showcase-overlay">
+                                <div class="home2-showcase-info">
+                                    <h4 class="home2-showcase-name">Dice & Beyond Flagship</h4>
+                                    <div class="home2-showcase-meta">
+                                        <span class="meta-item">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                            Koramangala, Bangalore
+                                        </span>
+                                        <span class="meta-dot">•</span>
+                                        <span class="meta-item">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                            10 AM – 10 PM
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home2-showcase-perks">
+                            <div class="home2-perk-line">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Table reservations for groups & private campaigns</span>
+                            </div>
+                            <div class="home2-perk-line">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Game Master guided rule walkthroughs for beginners</span>
+                            </div>
+                        </div>
+
+                        <div class="home2-showcase-footer">
+                            <span>Questions or table booking?</span>
+                            <a href="contact.html" class="home2-showcase-link">
+                                Contact Team
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
